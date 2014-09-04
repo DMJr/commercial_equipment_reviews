@@ -40,6 +40,8 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  config.include Helpers::Authentication
+
   require 'capybara/rails'
   require 'capybara/rspec'
   require 'valid_attribute'
