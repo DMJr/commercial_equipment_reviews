@@ -39,4 +39,9 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  require 'capybara/rails'
+  require 'capybara/rspec'
+  require 'valid_attribute'
+
 end
