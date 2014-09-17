@@ -18,6 +18,7 @@ class ManufacturersController < ApplicationController
   end
 
   def index
+    @manufacturers = Manufacturer.find(:all)
   end
 
   protected
