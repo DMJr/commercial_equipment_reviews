@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :manufacturers
   has_many :posts,
-    dependent: :destroy,
-    inverse_of: :user
-
-  has_many :manufactuers
+    dependent: :destroy#,
+    # inverse_of: :user
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
