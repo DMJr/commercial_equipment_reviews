@@ -42,10 +42,12 @@
         </section>
       </nav>
     </div>
-    <div class="row fullWidth">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <% if notice.present? || alert.present? %>
+      <div class="row fullWidth">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
     <div class="row fullWidth">
       <%= yield %>
     </div>
