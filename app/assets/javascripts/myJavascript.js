@@ -1,6 +1,7 @@
 $("#ourMissionButton").click(function(){
   var setColor = document.getElementById('ourMissionButton');
-    setColor.style.color='grey';
+  setColor.style.color='grey';
+  $('#homePageImage1').fadeTo('slow',0.5);
   $('html, body').animate({
     scrollTop: $("#ourMission").offset().top
   }, 1000);
@@ -23,6 +24,18 @@ $("#findADealerButton").click(function(){
     scrollTop: $("#findDealer").offset().top
   }, 1000);
 });
+
+// $(document).ready(function(){
+//   $(window).scroll(function(){
+//       var height = $('body').height();
+//       var scrollTop = $('body').scrollTop();
+//       var opacity = 1;
+//       if(scrollTop > 400) {
+//           opacity = 0.5;
+//       }
+//       $('#homePageImage1').css('opacity', 0.5);
+//   });
+// });
 
 // window.onLoad = userGreeting();
 //   function userGreeting(){
