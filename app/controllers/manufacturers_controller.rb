@@ -17,6 +17,10 @@ class ManufacturersController < ApplicationController
     end
   end
 
+  def show
+    @manufacturer = Manufacturer.find(params[:id])
+  end
+
   def index
     @manufacturers = Manufacturer.find(:all)
   end
