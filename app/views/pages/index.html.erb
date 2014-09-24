@@ -10,8 +10,8 @@
       </ul>
       <ul class="left pageNavFont">
         <li>
-          <div class= "pageNaveSpacing" id="ourPlanButton">
-            Our Plan
+          <div class= "pageNaveSpacing" id="ourManufacturersButton">
+            Manufacturers
           </div>
         </li>
       </ul>
@@ -49,10 +49,21 @@
 </div>
 
 <div class="row">
-  <div id="ourPlan">
-    <h1> Our Plan </h1>
+  <div id="ourManufacturers">
+    <h1> Manufacturers </h1>
       <div class="homePageText">
         Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+
+        <br><br><br>
+        <% @manufacturers.each do |manufacturer| %>
+          <b><%= manufacturer.name %></b>
+          <%= link_to manufacturer.name, manufacturer %>
+          <br>
+          <%= manufacturer.description %>
+          <br><br>
+        <% end %>
+
+        <%= link_to "View All", manufacturers_path %>
       </div>
   </div>
 </div>
