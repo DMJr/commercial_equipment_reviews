@@ -5,6 +5,7 @@ $("#ourMissionButton").click(function(){
   $('html, body').animate({
     scrollTop: $("#ourMission").offset().top
   }, 1000);
+  setColor.style.color='white';
   console.log('here');
 });
 
@@ -28,23 +29,58 @@ $("#findADealerButton").click(function(){
 
 
 $("#sticky_footer").click(function(){
+  var topdivs = $('#findADealerButton, #ourManufacturersButton, #ourMissionButton');
+  topdivs.attr('style','')
   $('#homePageImage1').fadeTo(1000,1.0);
   $('html, body').animate({scrollTop : 0},800);
   return false;
 });
 
 
-var map;
-function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644)
+function stripWhiteAndBlank(element) {
+  if (element != ' '){
+    return element
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+
+$(document).ready(function(){
+  var ourMissionButtonArray = $('#ourMissionButton').text().split("");
+  var filteredArray = ourMissionButtonArray.filter(stripWhiteAndBlank);
+  console.log(filteredArray);
+  for (var i = 0; i < filteredArray.length; i++) {
+    console.log(filteredArray[i])
+  };
+})
+
+$(window).scroll(function(){
+  if($(window).scrollTop() > 150 ){
+    $('#sticky_footer').stop(true,true).fadeIn("slow");
+  } else {
+    $('#sticky_footer').stop(true,true).fadeOut("slow");
+  }
+});
+
+// var window_height = $('body').scrollTop()
+// if (window_height < 60){
+//   console.log('success')
+// } else {
+//   $("#sticky_footer")[0].style.opacity = 1.0;
+// }
+
+
+// var map;
+// function initialize() {
+//   var mapOptions = {
+//     zoom: 8,
+//     center: new google.maps.LatLng(-34.397, 150.644)
+//   };
+//   map = new google.maps.Map(document.getElementById('map-canvas'),
+//       mapOptions);
+// }
+// google.maps.event.addDomListener(window, 'load', initialize);
+
+
 
 
 
