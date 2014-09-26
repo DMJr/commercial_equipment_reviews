@@ -34,7 +34,20 @@
     </center>
   </div>
 </div>
-
+<div class="row">
+  <!-- change this div to be unique and make it look beter -->
+  <!-- this was just an a random addition before work -->
+  <div id="findDealer">
+    <h1> Recent Posts </h1>
+      <div class="homePageText">
+        <% @posts.each do |post| %>
+          <%= post.title %><br/>
+          <%= post.body %>
+        <% end %>
+        Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+      </div>
+  </div>
+</div>
 <div class="row">
   <div id="ourMission">
     <h1>
@@ -75,4 +88,3 @@
       </div>
   </div>
 </div>
-

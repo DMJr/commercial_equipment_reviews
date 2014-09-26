@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
     @manufacturers = Manufacturer.find(:all)
-    # @manufacturer = Manufacturer.find(params[:id])
+    @posts = Post.find(:all)
   end
 end
