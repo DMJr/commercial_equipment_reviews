@@ -3,6 +3,13 @@
     <section class="top-bar-section">
       <ul class="left pageNavFont">
         <li>
+          <div class="pageNaveSpacing" id="whatsNewButton">
+            What's New
+          </div>
+        </li>
+      </ul>
+      <ul class="left pageNavFont">
+        <li>
           <div class="pageNaveSpacing" id="ourMissionButton">
             Our Mission
           </div>
@@ -37,15 +44,18 @@
 <div class="row">
   <!-- change this div to be unique and make it look beter -->
   <!-- this was just an a random addition before work -->
-  <div id="findDealer">
-    <h1> Recent Posts </h1>
-      <div class="homePageText">
-        <% @posts.each do |post| %>
-          <%= post.title %><br/>
-          <%= post.body %>
-        <% end %>
-        Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
-      </div>
+  <!-- limit posts to 5 most recent posts -->
+  <div id="whatsNew">
+    <div class="h1Tag">
+      <h1> What people are saying... </h1>
+    </div>
+    <div class="homePageText">
+      <% @posts.each do |post| %>
+        <%= post.title %><br/>
+        <%= post.body %>
+      <% end %>
+      Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+    </div>
   </div>
 </div>
 <div class="row">

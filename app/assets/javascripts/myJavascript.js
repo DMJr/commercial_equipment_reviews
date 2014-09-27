@@ -10,6 +10,16 @@ $("#ourMissionButton").click(function(){
 });
 
 
+
+$("#whatsNewButton").click(function(){
+  var setColor = document.getElementById('whatsNewButton');
+    setColor.style.color='grey';
+  $('html, body').animate({
+    scrollTop: $("#whatsNew").offset().top
+  }, 1000);
+});
+
+
 $("#ourManufacturersButton").click(function(){
   var setColor = document.getElementById('ourManufacturersButton');
     setColor.style.color='grey';
@@ -29,7 +39,7 @@ $("#findADealerButton").click(function(){
 
 
 $("#sticky_footer").click(function(){
-  var topdivs = $('#findADealerButton, #ourManufacturersButton, #ourMissionButton');
+  var topdivs = $('#findADealerButton, #ourManufacturersButton, #ourMissionButton, #whatsNewButton');
   topdivs.attr('style','')
   $('#homePageImage1').fadeTo(1000,1.0);
   $('html, body').animate({scrollTop : 0},800);
