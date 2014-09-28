@@ -6,7 +6,6 @@ $("#ourMissionButton").click(function(){
     scrollTop: $("#ourMission").offset().top
   }, 1000);
   setColor.style.color='white';
-  console.log('here');
 });
 
 
@@ -39,7 +38,8 @@ $("#findADealerButton").click(function(){
 
 
 $("#sticky_footer").click(function(){
-  var topdivs = $('#findADealerButton, #ourManufacturersButton, #ourMissionButton, #whatsNewButton');
+  var topdivs = $('#findADealerButton, #ourManufacturersButton,\
+                    #ourMissionButton, #whatsNewButton');
   topdivs.attr('style','')
   $('#homePageImage1').fadeTo(1000,1.0);
   $('html, body').animate({scrollTop : 0},800);
