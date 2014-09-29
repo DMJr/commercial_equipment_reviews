@@ -52,8 +52,16 @@
     color: white;
     opacity: 1.0;
 }
+#sticky_footer:hover {
+ cursor:pointer;
+}
+
 
 #ourMissionButton{}
+#ourMissionButton:hover {
+ cursor:pointer;
+}
+
 #ourMission{
   width: 100%;
   height: 400px;
@@ -65,7 +73,12 @@
   color: #ffffff;
 }
 
+
 #ourManufacturersButton{}
+#ourManufacturersButton:hover {
+ cursor:pointer;
+}
+
 #ourManufacturers{
   width: 100%;
   height: auto;
@@ -78,6 +91,9 @@
 }
 
 #findADealerButton{}
+#findADealerButton:hover {
+ cursor:pointer;
+}
 #findDealer{
   width: 100%;
   height: 400px;
@@ -90,6 +106,10 @@
 }
 
 #whatsNewButton{}
+#whatsNewButton:hover {
+ cursor:pointer;
+}
+
 #whatsNew{
   width: 100%;
   height: 400px;
