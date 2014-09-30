@@ -1,5 +1,7 @@
 class Manufacturer < ActiveRecord::Base
   belongs_to :user
+#   has_many :liftgatemodels,
+#     inverse_of: :manufacturer
 
   validates :name, presence: true, length: { maximum: 50 }
   validates_format_of :name, :with => /\A[a-zA-Z]+\Z/

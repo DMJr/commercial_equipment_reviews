@@ -3,7 +3,9 @@ Liftgateblog::Application.routes.draw do
 
   root 'pages#index'
   resources :posts
-  resources :manufacturers
+  resources :manufacturers do
+    resources :liftgate_models
+  end
   resources :maps, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.

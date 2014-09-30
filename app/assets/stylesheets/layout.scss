@@ -51,6 +51,7 @@
     padding: 10px;
     color: white;
     opacity: 1.0;
+
 }
 #sticky_footer:hover {
  cursor:pointer;
@@ -131,5 +132,28 @@
 .h1Tag{
   color: #ffffff;
   font-size: 0.75em;
+}
+
+.menu-flash{
+  color: silver;
+}
+
+.menu-unflash{
+  color: white;
+}
+
+#map-canvas {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  padding: 0;
+}
+
+#homepage-map {
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 30px;
 }
 
