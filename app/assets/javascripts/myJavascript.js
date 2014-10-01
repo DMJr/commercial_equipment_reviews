@@ -92,7 +92,7 @@ $(document).ready(function(){
     setTimeout(menuFlash,2000);
 });
 function menuFlash(){
-  nav_bar_elements = $('.pageNaveSpacing')
+  nav_bar_elements = $('.pageNaveSpacing');
   jQuery.each(nav_bar_elements, function(i){
     var el=$(this);
     setTimeout(function() {

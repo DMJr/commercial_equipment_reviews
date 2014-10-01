@@ -30,16 +30,42 @@
         </ul>
 
         <section class="top-bar-section">
-          <ul class="left">
-            <li><a href="#"> Who We Are </a></li>
-            <li><a href="#"> Be Honest </a></li>
-          </ul>
-          <ul class="right">
-            <% if user_signed_in? %>
-              <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-            <% end %>
-          </ul>
+          <div class="right">
+            <ul class="pageNavFont">
+              <li>
+                <div class="pageNaveSpacing" id="whatsNewButton">
+                  What's New
+                </div>
+              </li>
+            </ul>
+            <ul class="pageNavFont">
+              <li>
+                <div class="pageNaveSpacing" id="ourMissionButton">
+                  Our Mission
+                </div>
+              </li>
+            </ul>
+            <ul class="pageNavFont">
+              <li>
+                <div class= "pageNaveSpacing" id="ourManufacturersButton">
+                  Manufacturers
+                </div>
+              </li>
+            </ul>
+            <ul class="pageNavFont">
+              <li>
+                <div class="pageNaveSpacing" id="findADealerButton">
+                  Find a Dealer
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
+        <ul class="right">
+          <% if user_signed_in? %>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <% end %>
+        </ul>
       </nav>
     </div>
     <% if notice.present? || alert.present? %>
@@ -48,9 +74,9 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
-    <div class="row fullWidth">
+    <!-- <div class="row fullWidth"> -->
       <%= yield %>
-    </div>
+    <!-- </div> -->
     <div id="sticky_footer" class="text-center">
     Return to top.
     </div>
