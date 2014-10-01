@@ -6,6 +6,14 @@ $('.top-bar li').mouseenter(function() {
       $('.top-bar li').attr('style','')
   });
 
+$('#sticky_footer').mouseenter(function() {
+      this.style.fontWeight = 'bold';
+      this.style.height = '50px';
+  })
+  .mouseleave(function() {
+      $('#sticky_footer').attr('style','')
+  });
+
 
 $("#ourMissionButton").click(function(){
   var setColor = document.getElementById('ourMissionButton');
@@ -16,7 +24,6 @@ $("#ourMissionButton").click(function(){
   }, 1000);
   setColor.style.color='white';
 });
-
 
 
 $("#whatsNewButton").click(function(){
@@ -81,35 +88,32 @@ $(window).scroll(function(){
 });
 
 
-
-// var map;
-// function initialize() {
-//   var mapOptions = {
-//     zoom: 8,
-//     center: new google.maps.LatLng(-34.397, 150.644)
-//   };
-//   map = new google.maps.Map(document.getElementById('map-canvas'),
-//       mapOptions);
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
+$(document).ready(function(){
+    setTimeout(menuFlash,2000);
+});
+function menuFlash(){
+  nav_bar_elements = $('.pageNaveSpacing');
+  jQuery.each(nav_bar_elements, function(i){
+    var el=$(this);
+    setTimeout(function() {
+        el.addClass('menu-flash');
+    }, i * 100);
+  });
+};
 
 
-// $(document).ready(function(){
-//   $(window).scroll(function(){
-//       var height = $('body').height();
-//       var scrollTop = $('body').scrollTop();
-//       var opacity = 1;
-//       if(scrollTop > 400) {
-//           opacity = 0.5;
-//       }
-//       $('#homePageImage1').css('opacity', 0.5);
-//   });
-// });
 
-// window.onLoad = userGreeting();
-//   function userGreeting(){
-//       alert('hello there' );
-//   };
+var map;
+function initialize() {
+  var myLatLng = new google.maps.LatLng(39.50, -98.35);
+  var mapOptions = {
+    zoom: 3,
+    center: myLatLng,
+  };
+  map = new google.maps.Map(document.getElementById('homepage-map'),
+      mapOptions);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+

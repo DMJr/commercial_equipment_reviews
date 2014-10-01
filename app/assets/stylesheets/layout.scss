@@ -16,7 +16,7 @@
 
 .pageNavFont{
   font-size: 1 em;
-  color: white;
+  color: silver;
 }
 
 .pageNaveSpacing{
@@ -32,6 +32,7 @@
    margin-left: auto;
    margin-right: auto;
    max-width: initial;
+   background-color: #3D4851;
 }
 
 #homePagePic{
@@ -51,6 +52,7 @@
     padding: 10px;
     color: white;
     opacity: 1.0;
+
 }
 #sticky_footer:hover {
  cursor:pointer;
@@ -131,5 +133,28 @@
 .h1Tag{
   color: #ffffff;
   font-size: 0.75em;
+}
+
+.menu-flash{
+  color: white;
+}
+
+.menu-unflash{
+  color: white;
+}
+
+#map-canvas {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  padding: 0;
+}
+
+#homepage-map {
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 30px;
 }
 

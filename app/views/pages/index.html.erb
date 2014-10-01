@@ -1,35 +1,6 @@
 <div class="row fullWidth">
   <nav class="top-bar" id="addHeaderPadding" data-topbar >
-    <section class="top-bar-section">
-      <ul class="left pageNavFont">
-        <li>
-          <div class="pageNaveSpacing" id="whatsNewButton">
-            What's New
-          </div>
-        </li>
-      </ul>
-      <ul class="left pageNavFont">
-        <li>
-          <div class="pageNaveSpacing" id="ourMissionButton">
-            Our Mission
-          </div>
-        </li>
-      </ul>
-      <ul class="left pageNavFont">
-        <li>
-          <div class= "pageNaveSpacing" id="ourManufacturersButton">
-            Manufacturers
-          </div>
-        </li>
-      </ul>
-      <ul class="left pageNavFont">
-        <li>
-          <div class="pageNaveSpacing" id="findADealerButton">
-            Find a Dealer
-          </div>
-        </li>
-      </ul>
-    </section>
+
   </nav>
 </div>
 
@@ -52,9 +23,9 @@
     <div class="homePageText">
       <% @posts.each do |post| %>
         <%= post.title %><br/>
-        <%= post.body %>
+        <p><%= post.body %></p>
       <% end %>
-      Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+      <p>Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
     </div>
   </div>
 </div>
@@ -66,7 +37,7 @@
       </div>
     </h1>
       <div class="homePageText">
-        Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+        <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
       </div>
   </div>
 </div>
@@ -75,14 +46,13 @@
   <div id="ourManufacturers">
     <h1> Manufacturers </h1>
       <div class="homePageText">
-        Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+        <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
 
         <br><br><br>
         <% @manufacturers.each do |manufacturer| %>
-          <b><%= manufacturer.name %></b>
-          <%= link_to manufacturer.name, manufacturer %>
+          <h3><%= link_to manufacturer.name.capitalize, manufacturer %></h3>
           <br>
-          <%= manufacturer.description %>
+          <p><%= manufacturer.description %></p>
           <br><br>
         <% end %>
 
@@ -94,7 +64,14 @@
   <div id="findDealer">
     <h1> Find a Dealer </h1>
       <div class="homePageText">
-        Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.
+        <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
+        <div id="homepage-map"></div>
       </div>
   </div>
 </div>
+
+
+
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
