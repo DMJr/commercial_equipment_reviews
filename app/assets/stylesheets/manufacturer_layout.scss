@@ -21,30 +21,65 @@
   padding: 30px;
 }
 
-<<<<<<< HEAD
-#truck-background{
-  background: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/trucking_backgorund_2.png?X-Amz-Date=20141001T011911Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=23877a143a22dfc5e72c02928cfb7c1aee01e90598145a09cc9f299b20046bcb&X-Amz-Credential=ASIAJQB3ISIS2G2B3DFA/20141001/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEDoagAK30KhKwS0e0YuyNOnPkSfcJdQd2be5YhfoWHY7ywjmuRVMIU4I1foaDnsmvE2IbLUhWwokAervOthPNQYDcLMkadZbp4LSd8q6/vt5Eaec/EWM4t3ka33NN7AXlOaiw9a5EOUzO989SYk/5vHsRKTgrcHdA1Iz3exiiXtWwHVwMP0d05Mcgtb34WzQVACR4hNlJ16bSdvgQE6FkeYsRh2fG3BJhkTeIn3gSCautQHYpChPaWxQVGnGcTzzl258lOo5b%2BHkheX208Ct0Ot8GRy9XVokPReL%2Br6u4s7n3EFZTE3yLy5nK8F%2Baxiv0mM/vRHbekwz3c4HqYPKQXIrEAtRII%2BsraEF');
-  height: 100%;
-  background-attachment: aboslute;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-=======
 .manufacturerBaseBox {
   height: auto;
   width: 400px;
-  background-color: #00AD9F;
-  margin-top: 60px;
+  background-color: #3D4851;
+  margin: 20px;
 }
+
+#manufacturer {
+  height: auto;
+  width: 100%;
+  padding: 50px 10px;
+}
+
 
 .buttons{
   margin-left:auto;
   margin-right:auto;
+  padding: 15px;
 }
 
 
 .button-spacing {
   margin: 15px;
+  background-color: #00AD9F;
 }
 
->>>>>>> add_lift_gate_models_to_manufacturers
+.truck-background{
+  background: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/trucking_backgorund_2.png');
+  height: 100%;
+  background-attachment: aboslute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#manufacturer-map {
+  height: 300px;
+  width: 300px;
+  padding: 0;
+}
+
+
+#manufacturer-address {
+  height: 50px;
+  width: 300px;
+  padding: 10px;
+  background-color: #00AD9F;
+  color: white;
+}
+
+#manufacturer-lat{
+    visibility: hidden;
+}
+#manufacturer-lng{
+    visibility: hidden;
+}
+
+
+
+/*
+
+https://kuler.adobe.com/Crayons-color-theme-4404179/edit/?copy=true&base=2&rule=Custom&selected=1&name=Copy%20of%20Crayons&mode=rgb&rgbvalues=0.2560493827160494,0.30222222222219935,0.34,0,0.6784313725490196,0.6235294117647059,0.5607843137254902,0.7607843137254902,0.4117647058823529,0.9882352941176471,0.8509803921568627,0.4235294117647059,0.9882352941176471,0.4549019607843137,0.37254901960784315&swatchOrder=0,1,2,3,4
+*/
