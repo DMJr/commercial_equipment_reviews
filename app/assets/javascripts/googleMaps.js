@@ -1,4 +1,3 @@
-
 var manufacturerMap;
 function initialize() {
   var lat = parseFloat(document.getElementById('manufacturer-lat').innerHTML.trim());

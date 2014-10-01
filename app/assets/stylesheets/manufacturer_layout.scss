@@ -58,20 +58,26 @@
 #manufacturer-map {
   height: 300px;
   width: 300px;
-  margin: 20px;
   padding: 0;
 }
+
 
 #manufacturer-address {
   height: 50px;
   width: 300px;
-  margin: auto;
   padding: 10px;
-  background-color:white;
+  background-color: #00AD9F;
+  color: white;
 }
 
-#manufacturer-lat{}
-#manufacturer-lng{}
+#manufacturer-lat{
+    visibility: hidden;
+}
+#manufacturer-lng{
+    visibility: hidden;
+}
+
+
 
 /*
 
