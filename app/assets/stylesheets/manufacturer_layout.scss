@@ -24,17 +24,49 @@
 .manufacturerBaseBox {
   height: auto;
   width: 400px;
-  background-color: #00AD9F;
+  background-color: #3D4851;
   margin-top: 60px;
 }
 
 .buttons{
   margin-left:auto;
   margin-right:auto;
+  padding: 15px;
 }
 
 
 .button-spacing {
   margin: 15px;
+  background-color: #00AD9F;
 }
+
+.truck-background{
+  background: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/trucking_backgorund_2.png');
+  height: 100%;
+  background-attachment: aboslute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#manufacturer-map {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  padding: 0;
+}
+#manufacturer-address {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  padding: 0;
+  background-color:white;
+}
+
+#manufacturer-lat{}
+#manufacturer-lng{}
+
+/*
+
+https://kuler.adobe.com/Crayons-color-theme-4404179/edit/?copy=true&base=2&rule=Custom&selected=1&name=Copy%20of%20Crayons&mode=rgb&rgbvalues=0.2560493827160494,0.30222222222219935,0.34,0,0.6784313725490196,0.6235294117647059,0.5607843137254902,0.7607843137254902,0.4117647058823529,0.9882352941176471,0.8509803921568627,0.4235294117647059,0.9882352941176471,0.4549019607843137,0.37254901960784315&swatchOrder=0,1,2,3,4
+*/
 

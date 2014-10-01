@@ -103,17 +103,35 @@ function menuFlash(){
 
 
 
-var map;
+// var map;
+// function initialize() {
+//   var myLatLng = new google.maps.LatLng(39.50, -98.35);
+//   var mapOptions = {
+//     zoom: 3,
+//     center: myLatLng,
+//   };
+//   map = new google.maps.Map(document.getElementById('homepage-map'),
+//       mapOptions);
+// }
+// google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+var manufacturerMap;
 function initialize() {
-  var myLatLng = new google.maps.LatLng(39.50, -98.35);
+  var lat = document.getElementById('manufacturer-lat').innerHTML.trim();
+  var lng = document.getElementById('manufacturer-lng').innerHTML.trim();
+  console.log(lat);
+  console.log(lng);
+  var myLatLng = new google.maps.LatLng(lat, lng);
+  var manufacturerLatLng = new google.maps.LatLng(myLatLng);
   var mapOptions = {
     zoom: 3,
-    center: myLatLng,
+    center: manufacturerLatLng,
   };
-  map = new google.maps.Map(document.getElementById('homepage-map'),
+  manufacturerMap = new google.maps.Map(document.getElementById('manufacturer-map'),
       mapOptions);
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-
 
 

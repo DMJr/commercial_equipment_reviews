@@ -27,6 +27,6 @@ class ManufacturersController < ApplicationController
 
   protected
   def manufacturer_params
-    params.require(:manufacturer).permit(:name, :description)
+    params.require(:manufacturer).permit(:name, :description, :lat, :lng)
   end
 end
