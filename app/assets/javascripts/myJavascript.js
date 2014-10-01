@@ -117,21 +117,13 @@ function menuFlash(){
 
 
 
-var manufacturerMap;
-function initialize() {
-  var lat = document.getElementById('manufacturer-lat').innerHTML.trim();
-  var lng = document.getElementById('manufacturer-lng').innerHTML.trim();
-  console.log(lat);
-  console.log(lng);
-  var myLatLng = new google.maps.LatLng(lat, lng);
-  var manufacturerLatLng = new google.maps.LatLng(myLatLng);
-  var mapOptions = {
-    zoom: 3,
-    center: manufacturerLatLng,
-  };
-  manufacturerMap = new google.maps.Map(document.getElementById('manufacturer-map'),
-      mapOptions);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
+// var manufacturerMap;
+// function initialize() {
+//   var lat = parseFloat(document.getElementById('manufacturer-lat').innerHTML.trim());
+//   var lng = parseFloat(document.getElementById('manufacturer-lng').innerHTML.trim());
+//   var mapOptions = {
+//     zoom: 6,
+//     center: new google.maps.LatLng(lat, lng),
+//   };
+//   manufacturerMap = new google.maps.Map(document.getElementById('manufacturer-map'),
+//       mapOptions);

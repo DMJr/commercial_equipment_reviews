@@ -1,6 +1,7 @@
 <div class="truck-background">
+  <div id="manufacturer" id="manufacturer">
   <div class="row">
-    <div class="medium-4 small-12 columns manufacturerBaseBox">
+    <div class="medium-6 small-12 columns manufacturerBaseBox">
       <h1>
         <div class="title">
           <%= @manufacturer.name.capitalize %>
@@ -18,10 +19,11 @@
         </div>
       </div>
     </div>
-    <div class="medium-4 small-12 columns">
+    <div class="medium-6 small-12 columns">
       <div id="manufacturer-map"></div>
-      <div id="manufacturer-address">
-        Address:
+        <div id="manufacturer-address">
+          Address:
+        </div>
         <div id="manufacturer-lat">
           <%= @manufacturer.lat %>
         </div>
@@ -29,9 +31,6 @@
           <%= @manufacturer.lng %>
         </div>
       </div>
-    </div>
-    <div class="medium-4 small-12 columns">
-      <!-- fill this in -->
     </div>
   </div>
 </div>

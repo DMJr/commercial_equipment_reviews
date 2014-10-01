@@ -25,8 +25,15 @@
   height: auto;
   width: 400px;
   background-color: #3D4851;
-  margin-top: 60px;
+  margin: 20px;
 }
+
+#manufacturer {
+  height: auto;
+  width: 100%;
+  padding: 50px 10px;
+}
+
 
 .buttons{
   margin-left:auto;
@@ -49,16 +56,17 @@
 }
 
 #manufacturer-map {
-  height: 400px;
-  width: 400px;
-  margin: auto;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
   padding: 0;
 }
+
 #manufacturer-address {
   height: 50px;
-  width: 400px;
+  width: 300px;
   margin: auto;
-  padding: 0;
+  padding: 10px;
   background-color:white;
 }
 
