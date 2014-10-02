@@ -14,6 +14,10 @@ class BusinessesController < ApplicationController
   end
   def show
     @business = Business.find(params[:id])
+    # @reviews = Business.reviews
+    # binding.pry
+    # @reviews = Review.find(:all).where(business_id: { id: params[:id] })
+    # binding.pry
   end
   def index
     @businesses = Business.find(:all)
