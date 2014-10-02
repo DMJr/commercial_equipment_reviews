@@ -1,12 +1,34 @@
-<h1><%= @business.name %></h1>
-<p><%= @business.description %></p>
-<p><%= @business.owner %></p>
-<p><%= @business.address1 %></p>
-<p><%= @business.address2 %></p>
-<p><%= @business.city %></p>
-<p><%= @business.state %></p>
-<p><%= @business.zip %></p>
-
+<div class="business-background">
+  <div class="row">
+    <div class="large-6 small-12 columns">
+        <!-- insert something here -->
+    </div>
+    <div class="large-6 small-12 columns titleBox">
+      <center><h1><div id="titleFontColor"><%= @business.name.capitalize %></div></h1></center>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 small-12 columns descriptionBox">
+    <center><h2> Description </h2></center>
+    <p><%= @business.description %></p>
+  </div>
+  <div class="large-6 small-12 columns" class="title-box">
+    <div id="googleMapBusiness">
+      Insert Google Maps
+      <!-- Google Maps Here Make sure this div works-->
+    </div>
+    <div class="addressBox">
+      <%= @business.name.capitalize%>
+      <%= @business.owner %>
+      <%= @business.address1 %>
+      <%= @business.address2 %><br>
+      <%= @business.city %>,
+      <%= @business.state %>
+      <%= @business.zip %></p>
+    </div>
+  </div>
+</div>
 
 <% @business.reviews.each do |review| %>
   <p><%= review.title %></p>

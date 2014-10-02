@@ -1,0 +1,34 @@
+.business-background {
+  background: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/Wallpaper-Truck-Car.jpg');
+  height: 100%;
+  background-attachment: aboslute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleBox {
+  background-color: #3D4851;
+  height: auto;
+  width: 400px;
+  padding: 20px;
+}
+
+#titleFontColor {
+  color: white;
+}
+
+.descriptionBox {
+  height: auto;
+  padding: 20px;
+}
+
+.addressBox {
+  height: auto;
+  padding: 20px;
+}
+
+#googleMapBusiness {
+  height: 300px;
+  width: 300px;
+  backgorund-color: blue;
+}
