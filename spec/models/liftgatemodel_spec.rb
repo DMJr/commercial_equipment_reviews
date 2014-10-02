@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe LiftgateModel do
+describe Liftgatemodel do
   describe "#name" do
     it { should have_valid(:name).when("bmra", "rc") }
     it { should_not have_valid(:name).when("abcd123", nil, "") }

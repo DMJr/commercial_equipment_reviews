@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
     dependent: :destroy#,
     # inverse_of: :user
   has_many :businesses, dependent: :nullify
+  has_many :reviews, dependent: :nullify
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

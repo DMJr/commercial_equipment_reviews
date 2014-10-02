@@ -64,12 +64,14 @@
   <div id="findDealer">
     <h1> Find a Dealer </h1>
       <div class="homePageText">
+        <% @businesses.each do |business| %>
+          <%= link_to business.name.capitalize, business %>
+        <% end %>
         <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
         <div id="homepage-map"></div>
       </div>
   </div>
 </div>
-
 
 
 <script type="text/javascript"
