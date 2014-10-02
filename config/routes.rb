@@ -6,6 +6,7 @@ Liftgateblog::Application.routes.draw do
   resources :manufacturers do
     resources :liftgate_models
   end
+  resources :businesses
   resources :maps, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.

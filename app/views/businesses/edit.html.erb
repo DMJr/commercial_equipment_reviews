@@ -1,0 +1,36 @@
+<div class="row">
+  <%= simple_form_for @business do |f| %>
+    <div class="medium-10">
+      <div class="small-12 medium-6 columns">
+        <%= f.input :name, label: 'Name', placeholder: 'Name', autofocus: true %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :description, label: 'Description', placeholder: 'Body' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :owner, label: 'Owner', placeholder: 'Owner' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :address1, label: 'Address 1', placeholder: 'Address' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :address2, label: 'Address 2', placeholder: 'Address' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :city, label: 'City', placeholder: 'City' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :state, label: 'State', placeholder: 'State' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :zip, label: 'Zip', placeholder: 'Zip' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.input :phone_number, label: 'Phone Number', placeholder: 'Ex. 8884442222' %>
+      </div>
+      <div class="small-12 columns">
+        <%= f.button :submit %>
+      </div>
+    </div>
+  <% end %>
+</div>

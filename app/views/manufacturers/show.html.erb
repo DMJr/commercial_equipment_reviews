@@ -20,17 +20,19 @@
       </div>
     </div>
     <div class="medium-6 small-12 columns">
-      <div id="manufacturer-map"></div>
-        <div id="manufacturer-address">
-          Address:
+      <%if @manufacturer.lat %>
+        <div id="manufacturer-map"></div>
+          <div id="manufacturer-address">
+            Address:
+          </div>
+          <div id="manufacturer-lat">
+            <%= @manufacturer.lat %>
+          </div>
+          <div id="manufacturer-lng">
+            <%= @manufacturer.lng %>
+          </div>
         </div>
-        <div id="manufacturer-lat">
-          <%= @manufacturer.lat %>
-        </div>
-        <div id="manufacturer-lng">
-          <%= @manufacturer.lng %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
