@@ -55,8 +55,16 @@
     </div>
   </div>
   <div class="row">
+    <div id="homePageMap">
+      <div id="googleMap">
+        <div id="lat">42.009786</div><div id="lng">-71.232035</div>
+        <!-- map here -->
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div id="findDealer">
-      <h1> Find a Dealer </h1>
+      <h1><div class="h1Tag"> Find a Dealer </div></h1>
         <div class="homePageText">
           <ul>
           <% @businesses.each do |business| %>
@@ -64,11 +72,11 @@
           <% end %>
           </ul>
           <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
-          <div id="googleMap"></div>
         </div>
     </div>
   </div>
 </div>
+
 
 <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?sensor=false">

@@ -1,4 +1,5 @@
 <!-- This is for the large picture and biz title overlay -->
+
 <div class="business-background">
   <div class="row">
     <div class="large-6 small-12 columns">
@@ -16,13 +17,13 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row fullWidth">
   <div class="descriptionBox">
     <center><h2><div id="titleFontColor"> Description </div></h2></center>
     <p><%= @business.description %></p>
   </div>
 </div>
-<div class="row">
+<div class="row fullWidth">
   <% if @business.lat %>
     <div id="googleMapOutlineBusiness">
       <div id="googleMap">
@@ -31,7 +32,7 @@
     </div>
   <% end %>
 </div>
-<div class="row">
+<div class="row fullWidth">
   <div id="addressBox">
     <center><h2><div id="titleFontColor">Company Information </div></h2></center>
     <p><b>Owner:  </b><%= @business.owner.capitalize %></p>

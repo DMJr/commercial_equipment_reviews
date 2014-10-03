@@ -27,7 +27,7 @@
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
         </ul>
-
+        <!--  <%=current_uri = request.env['PATH_INFO']%>  -->
         <section class="top-bar-section">
           <div class="right">
             <ul class="pageNavFont">
@@ -58,13 +58,32 @@
                 </div>
               </li>
             </ul>
+            <% if user_signed_in? %>
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing">
+                    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+                  </div>
+                </li>
+              </ul>
+            <% else %>
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing">
+                    <%= link_to "Sign In", new_user_session_path %>
+                  </div>
+                </li>
+              </ul>
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing">
+                    <%= link_to "Join Us", new_user_registration_path %>
+                  </div>
+                </li>
+              </ul>
+            <% end %>
           </div>
         </section>
-        <ul class="right">
-          <% if user_signed_in? %>
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-          <% end %>
-        </ul>
       </nav>
     </div>
     <% if notice.present? || alert.present? %>
