@@ -9,8 +9,4 @@ class Manufacturer < ActiveRecord::Base
   # validates_format_of :description, :with => /\A[a-zA-Z]+\Z/
   validates :user, presence: true
 
-  # def latlong
-  #   latlong = lat + ',' + long
-  #   return latlong.to_s
-  # end
 end
