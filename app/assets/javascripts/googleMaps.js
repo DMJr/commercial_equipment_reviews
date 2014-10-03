@@ -1,7 +1,11 @@
-var manufacturerMap;
+var googleMap;
 function initialize() {
-  var lat = parseFloat(document.getElementById('manufacturer-lat').innerHTML.trim());
-  var lng = parseFloat(document.getElementById('manufacturer-lng').innerHTML.trim());
+  var lat = parseFloat(document.getElementById('lat').innerHTML.trim());
+  var lng = parseFloat(document.getElementById('lng').innerHTML.trim());
+  console.log(lat);
+  console.log(lng);
+  console.log(typeof(lat));
+  console.log(typeof(lng));
   var mapOptions = {
     zoom: 6,
     center: new google.maps.LatLng(lat, lng),
@@ -9,11 +13,12 @@ function initialize() {
     styles: js_array
 
   };
-  manufacturerMap = new google.maps.Map(document.getElementById('manufacturer-map'),
+
+  googleMap = new google.maps.Map(document.getElementById('googleMap'),
       mapOptions);
 
   marker = new google.maps.Marker({
-    map: manufacturerMap,
+    map: googleMap,
     draggable:true,
     animation: google.maps.Animation.DROP,
     position: new google.maps.LatLng(lat, lng)

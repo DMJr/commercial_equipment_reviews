@@ -1,80 +1,74 @@
 <div class="row fullWidth">
-  <nav class="top-bar" id="addHeaderPadding" data-topbar >
-
-  </nav>
-</div>
-
-
-<div class="row" id="homePagePic">
-  <div id="homePageImage1">
-    <center>
-      <img src = "https://s3-us-west-2.amazonaws.com/image-development/liftgates/truck.jpg" >
-    </center>
-  </div>
-</div>
-<div class="row">
-  <!-- change this div to be unique and make it look beter -->
-  <!-- this was just an a random addition before work -->
-  <!-- limit posts to 5 most recent posts -->
-  <div id="whatsNew">
-    <div class="h1Tag">
-      <h1> What people are saying... </h1>
-    </div>
-    <div class="homePageText">
-      <% @posts.each do |post| %>
-        <%= post.title %><br/>
-        <p><%= post.body %></p>
-      <% end %>
-      <p>Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
+  <div class="row" id="homePagePic">
+    <div id="homePageImage1">
+      <center>
+        <img src = "https://s3-us-west-2.amazonaws.com/image-development/liftgates/truck.jpg" >
+      </center>
     </div>
   </div>
-</div>
-<div class="row">
-  <div id="ourMission">
-    <h1>
+  <div class="row">
+    <!-- change this div to be unique and make it look beter -->
+    <!-- this was just an a random addition before work -->
+    <!-- limit posts to 5 most recent posts -->
+    <div id="whatsNew">
       <div class="h1Tag">
-        Our Mission
+        <h1> What people are saying... </h1>
       </div>
-    </h1>
       <div class="homePageText">
-        <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-  <div id="ourManufacturers">
-    <h1> Manufacturers </h1>
-      <div class="homePageText">
-        <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
-
-        <br><br><br>
-        <% @manufacturers.each do |manufacturer| %>
-          <h3><%= link_to manufacturer.name.capitalize, manufacturer %></h3>
-          <br>
-          <p><%= manufacturer.description %></p>
-          <br><br>
+        <% @posts.each do |post| %>
+          <%= post.title %><br/>
+          <p><%= post.body %></p>
         <% end %>
-
-        <%= link_to "View All", manufacturers_path %>
+        <p>Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="ourMission">
+      <h1>
+        <div class="h1Tag">
+          Our Mission
+        </div>
+      </h1>
+        <div class="homePageText">
+          <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="ourManufacturers">
+      <h1> Manufacturers </h1>
+        <div class="homePageText">
+          <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
+
+          <br><br><br>
+          <% @manufacturers.each do |manufacturer| %>
+            <h3><%= link_to manufacturer.name.capitalize, manufacturer %></h3>
+            <br>
+            <p><%= manufacturer.description %></p>
+            <br><br>
+          <% end %>
+
+          <%= link_to "View All", manufacturers_path %>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="findDealer">
+      <h1> Find a Dealer </h1>
+        <div class="homePageText">
+          <ul>
+          <% @businesses.each do |business| %>
+            <li><%= link_to business.name.capitalize, business %></li>
+          <% end %>
+          </ul>
+          <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
+          <div id="googleMap"></div>
+        </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div id="findDealer">
-    <h1> Find a Dealer </h1>
-      <div class="homePageText">
-        <ul>
-        <% @businesses.each do |business| %>
-          <li><%= link_to business.name.capitalize, business %></li>
-        <% end %>
-        </ul>
-        <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
-        <div id="homepage-map"></div>
-      </div>
-  </div>
-</div>
-
 
 <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?sensor=false">

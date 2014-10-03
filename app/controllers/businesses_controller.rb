@@ -14,10 +14,6 @@ class BusinessesController < ApplicationController
   end
   def show
     @business = Business.find(params[:id])
-    # @reviews = Business.reviews
-    # binding.pry
-    # @reviews = Review.find(:all).where(business_id: { id: params[:id] })
-    # binding.pry
   end
   def index
     @businesses = Business.find(:all)
@@ -41,6 +37,6 @@ class BusinessesController < ApplicationController
   end
   protected
   def business_params
-    params.require(:business).permit(:name, :description, :owner, :address1, :address2, :city, :state, :zip, :phone_number)
+    params.require(:business).permit(:name, :description, :owner, :address1, :address2, :city, :state, :zip, :phone_number, :lat, :lng)
   end
 end

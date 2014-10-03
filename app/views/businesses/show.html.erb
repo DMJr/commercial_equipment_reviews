@@ -1,31 +1,54 @@
+<!-- This is for the large picture and biz title overlay -->
 <div class="business-background">
   <div class="row">
     <div class="large-6 small-12 columns">
         <!-- insert something here -->
     </div>
     <div class="large-6 small-12 columns titleBox">
-      <center><h1><div id="titleFontColor"><%= @business.name.capitalize %></div></h1></center>
+      <center>
+        <h1>
+          <div id="titleFontColor">
+            <%= @business.name.capitalize %>
+          </div>
+        </h1>
+      </center>
     </div>
   </div>
 </div>
+
 <div class="row">
-  <div class="large-6 small-12 columns descriptionBox">
-    <center><h2> Description </h2></center>
+  <div class="descriptionBox">
+    <center><h2><div id="titleFontColor"> Description </div></h2></center>
     <p><%= @business.description %></p>
   </div>
-  <div class="large-6 small-12 columns" class="title-box">
-    <div id="googleMapBusiness">
-      Insert Google Maps
-      <!-- Google Maps Here Make sure this div works-->
+</div>
+<div class="row">
+  <% if @business.lat %>
+    <div id="googleMapOutlineBusiness">
+      <div id="googleMap">
+        <!-- Google Map For Business is Here -->
+      </div>
     </div>
-    <div class="addressBox">
-      <%= @business.name.capitalize%>
-      <%= @business.owner %>
-      <%= @business.address1 %>
-      <%= @business.address2 %><br>
-      <%= @business.city %>,
-      <%= @business.state %>
-      <%= @business.zip %></p>
+  <% end %>
+</div>
+<div class="row">
+  <div id="addressBox">
+    <center><h2><div id="titleFontColor">Company Information </div></h2></center>
+    <p><b>Owner:  </b><%= @business.owner.capitalize %></p>
+
+    <p><%= @business.name.capitalize %><br />
+    <p><%= @business.address1.capitalize %><br />
+    <% if @business.address2.capitalize %>
+      <%= @business.address2.capitalize %><br>
+    <% end %>
+    <%= @business.city.capitalize %>,
+    <%= @business.state.upcase %>
+    <%= @business.zip.to_s %></p>
+    <div id="lat">
+      <%= @business.lat %>
+    </div>
+    <div id="lng">
+      <%= @business.lng %>
     </div>
   </div>
 </div>
@@ -33,3 +56,7 @@
 <% @business.reviews.each do |review| %>
   <p><%= review.title %></p>
 <% end %>
+
+ <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>

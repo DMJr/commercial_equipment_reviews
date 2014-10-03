@@ -102,15 +102,15 @@ function menuFlash(){
 };
 
 
-var map;
-function initialize() {
-  var myLatLng = new google.maps.LatLng(39.50, -98.35);
-  var mapOptions = {
-    zoom: 3,
-    center: myLatLng,
-  };
-  map = new google.maps.Map(document.getElementById('homepage-map'),
-      mapOptions);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
+// var map;
+// function initialize() {
+//   var myLatLng = new google.maps.LatLng(39.50, -98.35);
+//   var mapOptions = {
+//     zoom: 3,
+//     center: myLatLng,
+//   };
+//   map = new google.maps.Map(document.getElementById('homepage-map'),
+//       mapOptions);
+// }
+// google.maps.event.addDomListener(window, 'load', initialize);
 

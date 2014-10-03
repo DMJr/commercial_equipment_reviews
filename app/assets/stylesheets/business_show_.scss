@@ -11,24 +11,36 @@
   height: auto;
   width: 400px;
   padding: 20px;
+  opacity: 0.8;
 }
 
 #titleFontColor {
   color: white;
+  font-weight: bold;
 }
 
 .descriptionBox {
   height: auto;
   padding: 20px;
+  background-color: #00AD9F;
+  color: white;
 }
 
-.addressBox {
+#googleMapOutlineBusiness {
+  height: 400px;
+  width: auto;
+}
+
+#googleMap {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#addressBox {
+  background-color: #3D4851;
+  color: white;
   height: auto;
+  width: 100%;
   padding: 20px;
-}
-
-#googleMapBusiness {
-  height: 300px;
-  width: 300px;
-  backgorund-color: blue;
 }
