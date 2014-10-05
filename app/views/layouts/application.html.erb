@@ -27,8 +27,9 @@
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
         </ul>
-        <!--  <%=current_uri = request.env['PATH_INFO']%>  -->
+
         <section class="top-bar-section">
+<% if request.env['PATH_INFO'] == root_path %>
           <div class="right">
             <ul class="pageNavFont">
               <li>
@@ -58,6 +59,38 @@
                 </div>
               </li>
             </ul>
+<% else %>
+          <div class="right">
+            <ul class="pageNavFont">
+              <li>
+                <div class="pageNaveSpacing" id="whatsNewButton">
+                  What's New
+                </div>
+              </li>
+            </ul>
+            <ul class="pageNavFont">
+              <li>
+                <div class="pageNaveSpacing" id="ourMissionButton">
+                  Our Mission
+                </div>
+              </li>
+            </ul>
+            <ul class="pageNavFont">
+              <li>
+                <div class= "pageNaveSpacing" id="ourManufacturersButton">
+                  <%= link_to "Manufacturers", new_user_session_path %>
+                </div>
+              </li>
+            </ul>
+            <ul class="pageNavFont">
+              <li>
+                <div class="pageNaveSpacing" id="findADealerButton">
+                  Find a Dealer
+                </div>
+              </li>
+            </ul>
+<% end %>
+
             <% if user_signed_in? %>
               <ul class="pageNavFont">
                 <li>

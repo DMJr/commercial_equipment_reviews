@@ -1,4 +1,8 @@
+<div class="row">
+  <h1> Business Listings </h1>
+</div>
+
 <% @businesses.each do |business| %>
-  <%= business.name %>
+  <h2><%= business.name %></h2>
   <%= business.phone_number %>
 <% end %>
