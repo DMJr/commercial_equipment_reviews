@@ -6,13 +6,28 @@ $('.top-bar li').mouseenter(function() {
       $('.top-bar li').attr('style','')
   });
 
-$('#sticky_footer').mouseenter(function() {
-      this.style.fontWeight = 'bold';
-      this.style.height = '50px';
-  })
-  .mouseleave(function() {
-      $('#sticky_footer').attr('style','')
-  });
+// $('#sticky_footer').mouseenter(function() {
+//       this.style.fontWeight = 'bold';
+//       this.style.height = '50px';
+//   })
+//   .mouseleave(function() {
+//       $('#sticky_footer').attr('style','')
+//   });
+
+$("#sticky_footer").hover(
+  function() {
+    $(this).animate({
+      height: '+=20',
+      }, 'medium');
+  },
+  //on mouseout
+  function() {
+    $(this).animate({
+      height: '-=20px' //substracts 250px
+      }, 'medium');
+  }
+);
+
 
 
 $("#ourMissionButton").click(function(){
