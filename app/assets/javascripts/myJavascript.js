@@ -17,13 +17,13 @@ $('.top-bar li').mouseenter(function() {
 $("#sticky_footer").hover(
   function() {
     $(this).animate({
-      height: '+=20',
-      }, 'medium');
+      height: '+=10',
+      }, 'fast');
   },
   //on mouseout
   function() {
     $(this).animate({
-      height: '-=20px' //substracts 250px
+      height: '-=10px' //substracts 250px
       }, 'medium');
   }
 );
