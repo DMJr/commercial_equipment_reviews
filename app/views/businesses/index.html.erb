@@ -2,7 +2,22 @@
   <h1> Business Listings </h1>
 </div>
 
+
 <% @businesses.each do |business| %>
-  <h2><%= business.name %></h2>
-  <%= business.phone_number %>
+  <div class="row">
+    <h2><%= business.name %></h2>
+  </div>
+  <div class="row">
+    <div class="large-12 medium-4 columns">
+      <%= business.phone_number %>
+    </div>
+    <div class="large-12 medium-4 columns">
+      <%= business.location %>
+    </div>
+    <div class="large-12 medium-4 columns">
+      <div class="businessMap">
+      <!-- google map of business here -->
+      </div>
+    </div>
+  </div>
 <% end %>
