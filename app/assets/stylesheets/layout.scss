@@ -52,7 +52,7 @@
     padding: 10px;
     color: white;
     opacity: 1.0;
-
+    display:none;
 }
 #sticky_footer:hover {
  cursor:pointer;
@@ -158,3 +158,24 @@
   margin-bottom: 30px;
 }
 
+.topNav {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 15px 6px -6px #777;
+    margin-bottom: 20px;
+}
+
+#homeImageFadeout {}
+
+#homePageTitleDiv{
+  width: 700px;
+  height: auto;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4em;
+  color: black;
+  font-weight: bold;
+  display: none;
+}

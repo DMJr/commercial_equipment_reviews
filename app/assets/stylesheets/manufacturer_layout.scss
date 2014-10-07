@@ -82,8 +82,38 @@
   height: 400px;
 }
 
+#reviewDiv {
+  width: auto;
+  height: 200px;
+  background-color: #3D4851;
+  color: white;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  overflow: auto;
+  margin: 20px;
+}
+
+#contactDiv {
+  width: auto;
+  height: 200px;
+  background-color: #3D4851;
+  color: white;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  overflow: auto;
+  margin: 20px;
+}
+
+.unhidden{
+    display:block;
+}
+
+#reviewButton {}
 
 /*
-
 https://kuler.adobe.com/Crayons-color-theme-4404179/edit/?copy=true&base=2&rule=Custom&selected=1&name=Copy%20of%20Crayons&mode=rgb&rgbvalues=0.2560493827160494,0.30222222222219935,0.34,0,0.6784313725490196,0.6235294117647059,0.5607843137254902,0.7607843137254902,0.4117647058823529,0.9882352941176471,0.8509803921568627,0.4235294117647059,0.9882352941176471,0.4549019607843137,0.37254901960784315&swatchOrder=0,1,2,3,4
 */

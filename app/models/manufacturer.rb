@@ -1,5 +1,6 @@
 class Manufacturer < ActiveRecord::Base
   belongs_to :user
+  has_many :reviews
 #   has_many :liftgatemodels,
 #     inverse_of: :manufacturer
 

@@ -1,20 +1,24 @@
 <div class="row">
   <%= simple_form_for [@review] do |f| %>
     <div class="medium-10">
-      <div class="small-12 medium-6 columns">
-        <%= f.input :title, label: 'Title', autofocus: true %>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <%= f.input :title, label: 'Title', autofocus: true %>
+        </div>
+        <div class="small-12 columns">
+          <%= f.input :body, label: 'Body', placeholder: 'Body' %>
+        </div>
       </div>
-      <div class="small-12 columns">
-        <%= f.input :body, label: 'Body', placeholder: 'Body' %>
-      </div>
-      <div class="small-12 columns">
-        <%= f.input :rating, label: 'Rating', collection: Review::USER_RATING_FOR_BUSINESS %>
-      </div>
-      <div class="small-12 columns">
-        <%= f.input :business_id, label: 'Business', collection: @businesses %>
-      </div>
-      <div class="small-12 columns">
-        <%= f.input :manufacturer_id, label: 'manufacturers', collection: @manufacturers %>
+      <div class="row">
+        <div class="medium-4 small-12 columns">
+          <%= f.input :rating, label: 'Rating', collection: Review::USER_RATING_FOR_BUSINESS %>
+        </div>
+        <div class="medium-4 small-12 columns">
+          <%= f.input :business_id, label: 'Business', collection: @businesses %>
+        </div>
+        <div class="medium-4 small-12 columns">
+          <%= f.input :manufacturer_id, label: 'Manufacturers', collection: @manufacturers %>
+        </div>
       </div>
       <div class="small-12 columns">
         <%= f.button :submit %>

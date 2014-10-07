@@ -104,7 +104,9 @@ $(window).scroll(function(){
 
 
 $(document).ready(function(){
-    setTimeout(menuFlash,2000);
+    setTimeout(pictureFade, 1000);
+    setTimeout(menuFlash, 2000);
+    setTimeout(homePageTextAppear, 2500);
 });
 function menuFlash(){
   nav_bar_elements = $('.pageNaveSpacing');
@@ -115,17 +117,28 @@ function menuFlash(){
     }, i * 100);
   });
 };
+function pictureFade(){
+  $('#homeImageFadeout').fadeTo('slow', 0.7);
+}
+function homePageTextAppear(){
+  $('#homePageTitleDiv').fadeIn('slow');
+}
+
+$('#reviewButton').click(function() {
+    $('#reviewDiv').fadeIn('slow');
+});
+$('#contactButton').click(function() {
+    $('#contactDiv').fadeIn('slow');
+});
 
 
-// var map;
-// function initialize() {
-//   var myLatLng = new google.maps.LatLng(39.50, -98.35);
-//   var mapOptions = {
-//     zoom: 3,
-//     center: myLatLng,
-//   };
-//   map = new google.maps.Map(document.getElementById('homepage-map'),
-//       mapOptions);
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
-
+$(document).ready(function(){
+    $('section[data-type="background"]').each(function(){
+        var $bgobj = $(this);
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            var coords = '50% '+ yPos + 'px';
+            $bgobj.css({ backgroundPosition: coords });
+        });
+    });
+});

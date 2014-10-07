@@ -1,0 +1,108 @@
+.business-background {
+  background: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/Wallpaper-Truck-Car.jpg');
+  height: 100%;
+  background-attachment: aboslute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleBox {
+  background-color: #3D4851;
+  height: auto;
+  width: 400px;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+#titleFontColor {
+  color: white;
+  font-weight: bold;
+}
+
+.descriptionBox {
+  height: auto;
+  padding: 20px;
+  background-color: #00AD9F;
+  color: white;
+}
+
+#googleMapOutlineBusiness {
+  height: 400px;
+  width: auto;
+}
+
+#googleMap {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#addressBox {
+  background-color: #3D4851;
+  color: white;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+#home {
+  background: url('https://s3-us-west-2.amazonaws.com/image-development/liftgates/truck.jpg') 50% 0 repeat fixed; min-height: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+
+#home article {
+  height: 500px;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 100%;
+}
+
+#about {
+  background: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/Wallpaper-Truck-Car.jpg') 50% 0 repeat fixed; min-height: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+#about article {
+  height: 500px;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 100%;
+}
+
+#footerBar {
+  display: block;
+  height: auto;
+  padding: 15px;
+  margin-top: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 30px;
+  background-color: #00AD9F;
+}
+
+.footerBarButtons {
+  width: 100%;
+  font-size: 2em;
+  color: white;
+}
+
+.footerBarButtons:hover {
+ cursor:pointer;
+}
+
+#companyDescription {}
+#companyInfo {}
+

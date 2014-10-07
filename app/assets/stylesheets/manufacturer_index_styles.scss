@@ -1,0 +1,44 @@
+#titleHeaderBox{
+  padding: 20px;
+}
+
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+#boxContainer {
+  width: 100%;
+  align-left: auto;
+  align-right: auto;
+  text-align:center;
+}
+
+.manufactureContainer {
+  display: inline-block;
+  padding: 5px;
+  height: 200px;
+  width: 200px;
+}
+
+.greenBackground {
+  background-color: #8FC269;
+}
+
+.orangeBackground {
+  background-color: #FC745F;
+}
+
+.manufacturerBackground {
+  background-image: url('https://s3-us-west-2.amazonaws.com/image-production/uploads/business/image/Screen+Shot+2014-10-06+at+9.52.04+PM.png');
+  height: 100%;
+  background-attachment: aboslute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

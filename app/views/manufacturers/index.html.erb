@@ -1,6 +1,13 @@
-<h1> Manufacturers </h1>
+<div class="manufacturerBackground">
+  <div id="titleHeaderBox">
+    <h1> Manufacturers </h1>
+  </div>
 
-<% @manufacturers.each do |manufacturer| %>
-  <h2><%= manufacturer.name %></h2>
-  <%= manufacturer.description %>
-<% end %>
+  <div id="boxContainer">
+    <% @manufacturers.each do |manufacturer| %>
+      <div class="manufactureContainer <%= cycle('greenBackground', 'orangeBackground')%>">
+        <h2><b><%= link_to manufacturer.name.capitalize, manufacturer, {:style=>'color:#FFFFFF'} %></b></h2>
+      </div>
+    <% end %>
+  </div>
+</div>
