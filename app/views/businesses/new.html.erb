@@ -10,23 +10,35 @@
       <div class="small-12 columns">
         <%= f.input :owner, label: 'Owner', placeholder: 'Owner' %>
       </div>
-      <div class="small-12 columns">
-        <%= f.input :address1, label: 'Address 1', placeholder: 'Address' %>
+      <div class="row">
+        <div class="medium-6 small-12 columns">
+          <%= f.input :address1, label: 'Address 1', placeholder: 'Address' %>
+        </div>
+        <div class="medium-6 small-12 columns">
+          <%= f.input :address2, label: 'Address 2', placeholder: 'Address' %>
+        </div>
       </div>
-      <div class="small-12 columns">
-        <%= f.input :address2, label: 'Address 2', placeholder: 'Address' %>
+      <div class="row">
+        <div class="medium-4 small-12 columns">
+          <%= f.input :city, label: 'City', placeholder: 'City' %>
+        </div>
+        <div class="medium-4 small-12 columns">
+          <%= f.input :state, label: 'State', placeholder: 'State' %>
+        </div>
+        <div class="medium-4 small-12 columns">
+          <%= f.input :zip, label: 'Zip', placeholder: 'Zip' %>
+        </div>
       </div>
-      <div class="small-12 columns">
-        <%= f.input :city, label: 'City', placeholder: 'City' %>
-      </div>
-      <div class="small-12 columns">
-        <%= f.input :state, label: 'State', placeholder: 'State' %>
-      </div>
-      <div class="small-12 columns">
-        <%= f.input :zip, label: 'Zip', placeholder: 'Zip' %>
-      </div>
-      <div class="small-12 columns">
-        <%= f.input :phone_number, label: 'Phone Number', placeholder: 'Ex. 8884442222' %>
+      <div class="row">
+        <div class="medium-4 small-12 columns">
+          <%= f.input :phone_number, label: 'Phone Number', placeholder: 'Ex. 8884442222' %>
+        </div>
+        <div class="medium-4 small-12 columns">
+          <%= f.input :lat, label: 'Latitude', placeholder: 'Enter your lat if you know!' %>
+        </div>
+        <div class="medium-4 small-12 columns">
+          <%= f.input :lng, label: 'Longitude', placeholder: 'Enter your lat if you know!' %>
+        </div>
       </div>
       <div class="small-12 columns">
         <%= f.button :submit %>
