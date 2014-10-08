@@ -10,8 +10,8 @@ function initialize() {
     zoom: 6,
     center: new google.maps.LatLng(lat, lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    styles: js_array
-
+    styles: js_array,
+    scrollwheel: false,
   };
 
   googleMap = new google.maps.Map(document.getElementById('googleMap'),
