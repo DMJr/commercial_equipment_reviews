@@ -18,83 +18,80 @@
         <ul class="title-area">
           <li class="name">
             <h1>
-              <a href="#">
-                <div id="companyNameHeader">
-                  <a href="/">Provider Reports</a>
-                </div>
-              </a>
+              <div id="companyNameHeader">
+                FleetSeek
+              </div>
             </h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
         </ul>
 
         <section class="top-bar-section">
-<% if request.env['PATH_INFO'] == root_path %>
-          <div class="right">
-            <ul class="pageNavFont">
-              <li>
-                <div class="pageNaveSpacing" id="whatsNewButton">
-                  What's New
-                </div>
-              </li>
-            </ul>
-            <ul class="pageNavFont">
-              <li>
-                <div class="pageNaveSpacing" id="ourMissionButton">
-                  Our Mission
-                </div>
-              </li>
-            </ul>
-            <ul class="pageNavFont">
-              <li>
-                <div class= "pageNaveSpacing" id="ourManufacturersButton">
-                  Manufacturers
-                </div>
-              </li>
-            </ul>
-            <ul class="pageNavFont">
-              <li>
-                <div class="pageNaveSpacing" id="findADealerButton">
-                  Find a Dealer
-                </div>
-              </li>
-            </ul>
-<% else %>
-          <div class="right">
-            <ul class="pageNavFont">
-              <li>
-                <div class="pageNaveSpacing" id="whatsNewButton">
-                  What's New
-                </div>
-              </li>
-            </ul>
-            <ul class="pageNavFont">
-              <li>
-                <div class="pageNaveSpacing" id="ourMissionButton">
-                  Our Mission
-                </div>
-              </li>
-            </ul>
-            <ul class="pageNavFont">
-              <a href="/manufacturers/">
+          <% if request.env['PATH_INFO'] == root_path %>
+            <div class="right">
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing" id="whatsNewButton">
+                    What's New
+                  </div>
+                </li>
+              </ul>
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing" id="ourMissionButton">
+                    Our Mission
+                  </div>
+                </li>
+              </ul>
+              <ul class="pageNavFont">
                 <li>
                   <div class= "pageNaveSpacing" id="ourManufacturersButton">
                     Manufacturers
                   </div>
                 </li>
-              </a>
-            </ul>
-            <ul class="pageNavFont">
-              <a href="/businesses/">
+              </ul>
+              <ul class="pageNavFont">
                 <li>
                   <div class="pageNaveSpacing" id="findADealerButton">
-                    Dealers
+                    Find a Dealer
                   </div>
                 </li>
-              </a>
-            </ul>
-<% end %>
-
+              </ul>
+          <% else %>
+            <div class="right">
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing" id="whatsNewButton">
+                    What's New
+                  </div>
+                </li>
+              </ul>
+              <ul class="pageNavFont">
+                <li>
+                  <div class="pageNaveSpacing" id="ourMissionButton">
+                    Our Mission
+                  </div>
+                </li>
+              </ul>
+              <ul class="pageNavFont">
+                <a href="/manufacturers/">
+                  <li>
+                    <div class= "pageNaveSpacing" id="ourManufacturersButton">
+                      Manufacturers
+                    </div>
+                  </li>
+                </a>
+              </ul>
+              <ul class="pageNavFont">
+                <a href="/businesses/">
+                  <li>
+                    <div class="pageNaveSpacing" id="findADealerButton">
+                      Dealers
+                    </div>
+                  </li>
+                </a>
+              </ul>
+            <% end %>
             <% if user_signed_in? %>
               <ul class="pageNavFont">
                 <li>

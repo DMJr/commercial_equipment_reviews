@@ -1,7 +1,11 @@
 <div class="row fullWidth">
   <div id="homeImageFadeout">
     <section id="home" data-type="background" data-speed="10">
-      <article> <div id="homePageTitleDiv"> Find out who you can trust... </div> </article>
+      <article>
+        <div id="homePageTitleDiv"> Adding transparency... </div>
+         <div id="homePageSubDiv1"> because sometimes... </div>
+         <div id="homePageSubDiv2"> haircuts are overrated. </div>
+      </article>
     </section>
   </div>
 
@@ -49,6 +53,7 @@
     <div id="findDealer">
       <h1><div class="h1Tag"><b> Find a Dealer </b></div></h1>
         <div class="homePageText">
+          <%= link_to 'See all dealers', businesses_path %>
           <ul>
           <% @businesses.each do |business| %>
             <li><%= link_to business.name.capitalize, business %></li>
@@ -61,22 +66,23 @@
 
 
   <div class="row">
-    <section id="homePageManufacturerBackground" data-type="background" data-speed="10"><article>
-      <div id="ourManufacturers">
-        <h1><b> Manufacturers </b></h1>
-          <div class="homePageText">
-            <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
+    <section id="homePageManufacturerBackground" data-type="background" data-speed="10">
+      <article>
+        <div id="ourManufacturers">
+          <h1><b> Manufacturers </b></h1>
+            <div class="homePageText">
+              <p>Ut porttitor metus est, maximus fermentum nibh luctus ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nec dui aliquam, ultricies velit eu, dictum nisl. Quisque non viverra elit, ac rhoncus nisi. Mauris ut sem nec mauris rhoncus volutpat. Fusce ac libero turpis. Maecenas efficitur erat arcu. Nunc vel turpis posuere, rhoncus odio a, egestas augue. Proin at tellus ipsum.</p>
 
-            <%= link_to "View All", manufacturers_path %>
-            <br><br>
-            <% @manufacturers.each do |manufacturer| %>
-              <h3><b><%= link_to manufacturer.name.capitalize, manufacturer %></b></h3>
-              <br>
-              <p><%= manufacturer.description %></p>
+              <%= link_to "View All", manufacturers_path %>
               <br><br>
-            <% end %>
-          </div>
-      </div>
+              <% @manufacturers.each do |manufacturer| %>
+                <h3><b><%= link_to manufacturer.name.capitalize, manufacturer %></b></h3>
+                <br>
+                <p><%= manufacturer.description %></p>
+                <br><br>
+              <% end %>
+            </div>
+        </div>
       </article>
     </section>
   </div>
