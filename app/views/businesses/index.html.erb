@@ -1,11 +1,12 @@
 <div class="row" id="businessHeader">
   <h1> Browse Dealers... </h1>
 </div>
-
-<%= simple_form_for :q, url: businesses_path, method: :get do |f|%>
-    <%= f.input :name, label: false, placeholder: 'Search by Name', autofocus: true %>
-   <%= f.button :submit, 'Submit' %>
-<%end%>
+<div class="row">
+  <%= simple_form_for :q, url: businesses_path, method: :get do |f|%>
+      <%= f.input :name, label: false, placeholder: 'Search by Name', autofocus: true %>
+     <%= f.button :submit, 'Submit' %>
+  <%end%>
+</div>
 
 <div class="row businessListingBox">
   <div class="medium-7 small-12 columns">
