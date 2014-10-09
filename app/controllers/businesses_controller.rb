@@ -16,7 +16,17 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
   end
   def index
-    @businesses = Business.find(:all)
+    if params['q']
+      if params['q']['name']
+        name = params[:q][:name]
+        @businesses = Business.where("name ilike ?", "%#{name}%")
+      end
+      if params['q']['name'] == 'all'
+        @businesses = Business.all
+      end
+    else
+      @businesses = Business.all
+    end
   end
   def edit
     @business = Business.find(params[:id])
