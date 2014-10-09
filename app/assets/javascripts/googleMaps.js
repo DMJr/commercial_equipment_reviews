@@ -1,14 +1,36 @@
 var googleMap;
 function initialize() {
-  var lat = parseFloat(document.getElementById('lat').innerHTML.trim());
-  var lng = parseFloat(document.getElementById('lng').innerHTML.trim());
-  console.log(lat);
-  console.log(lng);
-  console.log(typeof(lat));
-  console.log(typeof(lng));
+  var lats = (document.getElementsByClassName('lats'));
+  var longs = (document.getElementsByClassName('longs'));
+    if (lats.length > 1){
+        var lat_values = [];
+        for (var i=0; i <= lats.length; i++){
+            lat = parseFloat(lats[i].innerHTML.trim());
+            console.log(lat);
+            lat_values.push(lat);
+            // console.log(lat_values);
+        }
+    } else {
+        lats = parseFloat($('.lats')[0].innerHTML.trim())
+        longs = parseFloat($('.longs')[0].innerHTML.trim())
+    }
+    if (longs.length > 1) {
+        var long_values = [];
+        for (var i=0; i <= longs.length; i++){
+            lng = parseFloat(longs[i].innerHTML.trim());
+            console.log(lng);
+            long_values.push(lng);
+            console.log(long_values);
+        }
+    }
+  console.log('###');
+  // console.log(parseFloat(lats.innerHTML().));
+  console.log(longs);
+  console.log(typeof(lats));
+  console.log(typeof(longs));
   var mapOptions = {
     zoom: 6,
-    center: new google.maps.LatLng(lat, lng),
+    center: new google.maps.LatLng(lats, longs),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     styles: js_array,
     scrollwheel: false,
@@ -21,7 +43,7 @@ function initialize() {
     map: googleMap,
     draggable:true,
     animation: google.maps.Animation.DROP,
-    position: new google.maps.LatLng(lat, lng)
+    position: new google.maps.LatLng(lats, longs)
   });
   google.maps.event.addListener(marker, 'click', toggleBounce);
 }
