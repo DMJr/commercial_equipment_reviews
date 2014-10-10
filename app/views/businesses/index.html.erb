@@ -2,12 +2,28 @@
   <h1> Browse Dealers... </h1>
 </div>
 <div class="row">
-  <%= simple_form_for :q, url: businesses_path, method: :get do |f|%>
-      <%= f.input :name, label: false, placeholder: 'Search by Name', autofocus: true %>
-     <%= f.button :submit, 'Submit' %>
-  <%end%>
+  <div class="medium-6 small-12 columns">
+    <div class="row">
+      <%= simple_form_for :q, url: businesses_path, method: :get do |f|%>
+        <%= f.input :name, label: false, placeholder: 'Search by Name', autofocus: true %>
+    </div>
+    <div class="row">
+        <%= f.button :submit, 'Submit' %>
+      <%end%>
+    </div>
+  </div>
+  <div class="medium-6 small-12 columns">
+  </div>
 </div>
-
+<div class="row">
+  <% if @businesses.count > 1 %>
+    You're in luck!  We found <%= @businesses.count.to_s %> businesses!
+  <% elsif @businesses.count == 1 %>
+    We found 1 business matching your search.
+  <% else %>
+    Sorry, we have no matches for your search at this time.
+  <% end %>
+</div>
 <div class="row businessListingBox">
   <div class="medium-7 small-12 columns">
     <% @businesses.each do |business| %>
@@ -50,9 +66,14 @@
     <% end %>
   </div>
   <div class="medium-5 small-12 columns">
-    <div id="businessMap">
-      <div id="googleMap">
-        map here
+    <div id="MapTitle">
+      Available Matches
+    </div>
+    <div id="sticker">
+      <div id="businessMap">
+        <div id="googleMap">
+          map here
+        </div>
       </div>
     </div>
   </div>

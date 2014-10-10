@@ -16,7 +16,7 @@ function menuFlash(){
 };
 
 function pictureFade(){
-  $('#homeImageFadeout').fadeTo(5000, 0.7).fadeTo('slow', 1.0);
+  $('#homeImageFadeout').fadeTo(3400, 0.7).fadeTo('slow', 1.0);
 }
 function homePageTextAppear(){
   $('#homePageTitleDiv').fadeIn('slow');

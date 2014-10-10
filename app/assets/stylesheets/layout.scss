@@ -28,6 +28,13 @@
   color: white;
   margin: 15px;
 }
+#companyNameHeader a:link,
+#companyNameHeader a:visited {
+  color: white;
+}
+#companyNameHeader a:hover {
+   color: #00AD9F;
+}
 
 .fullWidth {
    width: 100%;

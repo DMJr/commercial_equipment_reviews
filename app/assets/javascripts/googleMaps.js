@@ -64,6 +64,7 @@ function toggleBounce() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
 js_array = [
     {
         "featureType": "water",
@@ -156,5 +157,3 @@ js_array = [
         ]
     }
 ]
-
-
