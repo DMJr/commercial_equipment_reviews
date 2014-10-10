@@ -7,7 +7,18 @@
     <% @manufacturers.each do |manufacturer| %>
       <div class="manufactureContainer <%= cycle('greenBackground', 'orangeBackground')%>">
         <h2><b><%= link_to manufacturer.name.capitalize, manufacturer, {:style=>'color:#FFFFFF'} %></b></h2>
+        <div class="lats"><%=manufacturer.lat%></div><div class="longs"><%= manufacturer.lng %></div>
       </div>
     <% end %>
   </div>
 </div>
+<section>
+  <div id="homePageMap">
+    <div id="googleMap">
+    </div>
+  </div>
+</section>
+ <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+

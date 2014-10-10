@@ -20,6 +20,9 @@ class BusinessesController < ApplicationController
       if params['q']['name']
         name = params[:q][:name]
         @businesses = Business.where("name ilike ?", "%#{name}%")
+      elsif params['q']['state']
+        state = ['q']['state']
+        @businesses = Business.where(:name => state)
       end
       if params['q']['name'] == 'all'
         @businesses = Business.all

@@ -6,14 +6,18 @@ function initialize() {
         var lat_values = [];
         for (var i=0; i < lats.length; i++){
             lat = parseFloat(lats[i].innerHTML.trim());
-            lat_values.push(lat);
+            if (isNaN(lat) == false ) {
+                lat_values.push(lat);
+            }
         }
     }
     if (longs.length >= 1) {
         var long_values = [];
         for (var i=0; i < longs.length; i++){
             lng = parseFloat(longs[i].innerHTML.trim());
-            long_values.push(lng);
+            if (isNaN(lng) == false ) {
+                long_values.push(lng);
+            }
         }
     }
     if (lat_values.length) {
@@ -51,7 +55,6 @@ function initialize() {
 }
 
 function toggleBounce() {
-
   if (marker.getAnimation() != null) {
     marker.setAnimation(null);
   } else {
@@ -60,9 +63,6 @@ function toggleBounce() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
 
 js_array = [
     {
