@@ -2,50 +2,52 @@ var googleMap;
 function initialize() {
   var lats = (document.getElementsByClassName('lats'));
   var longs = (document.getElementsByClassName('longs'));
-    if (lats.length > 1){
+    if (lats.length >= 1) {
         var lat_values = [];
-        for (var i=0; i <= lats.length; i++){
+        for (var i=0; i < lats.length; i++){
             lat = parseFloat(lats[i].innerHTML.trim());
-            console.log(lat);
             lat_values.push(lat);
-            // console.log(lat_values);
         }
-    } else {
-        lats = parseFloat($('.lats')[0].innerHTML.trim())
-        longs = parseFloat($('.longs')[0].innerHTML.trim())
     }
-    if (longs.length > 1) {
+    if (longs.length >= 1) {
         var long_values = [];
-        for (var i=0; i <= longs.length; i++){
+        for (var i=0; i < longs.length; i++){
             lng = parseFloat(longs[i].innerHTML.trim());
-            console.log(lng);
             long_values.push(lng);
-            console.log(long_values);
         }
     }
-  console.log('###');
-  // console.log(parseFloat(lats.innerHTML().));
-  console.log(longs);
-  console.log(typeof(lats));
-  console.log(typeof(longs));
-  var mapOptions = {
-    zoom: 6,
-    center: new google.maps.LatLng(lats, longs),
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    styles: js_array,
-    scrollwheel: false,
-  };
+    if (lat_values.length) {
+        var locations = [];
+        for (var i=0; i < lat_values.length; i++) {
+            locations.push([lat_values[i], long_values[i]]);
+        }
+    }
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        zoom: 6,
+        center: new google.maps.LatLng(locations[0][0], locations[0][1]),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: js_array,
+        scrollwheel: false,
+      };
 
-  googleMap = new google.maps.Map(document.getElementById('googleMap'),
-      mapOptions);
+    googleMap = new google.maps.Map(document.getElementById('googleMap'),
+        mapOptions);
 
-  marker = new google.maps.Marker({
-    map: googleMap,
-    draggable:true,
-    animation: google.maps.Animation.DROP,
-    position: new google.maps.LatLng(lats, longs)
-  });
-  google.maps.event.addListener(marker, 'click', toggleBounce);
+    for( i = 0; i < locations.length; i++ ) {
+        var position = new google.maps.LatLng(locations[i][0], locations[i][1]);
+        marker = new google.maps.Marker({
+            position: position,
+            map: googleMap,
+            draggable:true,
+            animation: google.maps.Animation.DROP,
+        });
+        bounds.extend(position);
+    }
+    if (locations.length > 1){
+        googleMap.fitBounds(bounds);
+    }
+    google.maps.event.addListener(marker, 'click', toggleBounce);
 }
 
 function toggleBounce() {
