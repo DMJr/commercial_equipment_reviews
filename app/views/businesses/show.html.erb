@@ -55,9 +55,12 @@
   </div>
 </div>
 
-<% @business.reviews.each do |review| %>
-  <p><%= review.title %></p>
-<% end %>
+<div id="businessReveiws">
+  Reviews:
+  <% @business.reviews.each do |review| %>
+    <p><%= review.title %></p>
+  <% end %>
+</div>
 
 <div id="footerBar">
   <div class="medium-6 small-12 columns">
